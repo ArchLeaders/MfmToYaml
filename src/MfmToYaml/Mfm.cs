@@ -41,6 +41,7 @@ public class Mfm
         {
             foreach (var (key, functionEnum) in Enums) {
                 emitter.WriteString(key);
+                emitter.Tag($"!{functionEnum.Type}");
                 emitter.BeginMapping();
                 {
                     foreach (var (enumKey, enumName) in functionEnum) {

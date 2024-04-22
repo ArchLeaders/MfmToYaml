@@ -57,13 +57,16 @@ public class Mfm
 
         emitter.BeginMapping();
         {
+            Span<byte> key = new byte[24];
+            key[0] = (byte)'[';
+
             foreach (var ((group, type), function) in Functions) {
-                emitter.BeginSequence(SequenceStyle.Flow);
-                {
-                    emitter.WriteInt32(group);
-                    emitter.WriteInt32(type);
-                }
-                emitter.EndSequence();
+                group.TryFormat(key[1..], out int groupSize);
+                key[groupSize + 1] = (byte)',';
+                key[groupSize + 2] = (byte)' ';
+                type.TryFormat(key[(groupSize + 3)..], out int typeSize);
+                key[typeSize = 3 + groupSize + typeSize] = (byte)']';
+                emitter.WriteScalar(key[..(typeSize + 1)]);
 
                 emitter.Tag($"!{function.Name}");
                 emitter.BeginSequence();

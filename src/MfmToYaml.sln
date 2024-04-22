@@ -3,20 +3,45 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MfmToYaml", "MfmToYaml\MfmToYaml.csproj", "{14E586BE-4EAD-491F-9470-3240235B78F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MfmToYaml", "MfmToYaml\MfmToYaml.csproj", "{14E586BE-4EAD-491F-9470-3240235B78F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{F961C6F9-957C-4345-AC8B-3DC1DACF0C59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VYaml.Annotations", "..\lib\VYaml\VYaml.Annotations\VYaml.Annotations.csproj", "{A173C2A7-8306-4327-A853-9F58BEAFCFF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VYaml.SourceGenerator", "..\lib\VYaml\VYaml.SourceGenerator\VYaml.SourceGenerator.csproj", "{FDDA126C-3A63-4BF0-833C-E9E149E62547}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VYaml", "..\lib\VYaml\VYaml\VYaml.csproj", "{3DC36830-B57F-46B9-9FB7-634F7426E091}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{14E586BE-4EAD-491F-9470-3240235B78F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{14E586BE-4EAD-491F-9470-3240235B78F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14E586BE-4EAD-491F-9470-3240235B78F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14E586BE-4EAD-491F-9470-3240235B78F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A173C2A7-8306-4327-A853-9F58BEAFCFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A173C2A7-8306-4327-A853-9F58BEAFCFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A173C2A7-8306-4327-A853-9F58BEAFCFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A173C2A7-8306-4327-A853-9F58BEAFCFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDA126C-3A63-4BF0-833C-E9E149E62547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDA126C-3A63-4BF0-833C-E9E149E62547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDA126C-3A63-4BF0-833C-E9E149E62547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDA126C-3A63-4BF0-833C-E9E149E62547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC36830-B57F-46B9-9FB7-634F7426E091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC36830-B57F-46B9-9FB7-634F7426E091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC36830-B57F-46B9-9FB7-634F7426E091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC36830-B57F-46B9-9FB7-634F7426E091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A173C2A7-8306-4327-A853-9F58BEAFCFF3} = {F961C6F9-957C-4345-AC8B-3DC1DACF0C59}
+		{FDDA126C-3A63-4BF0-833C-E9E149E62547} = {F961C6F9-957C-4345-AC8B-3DC1DACF0C59}
+		{3DC36830-B57F-46B9-9FB7-634F7426E091} = {F961C6F9-957C-4345-AC8B-3DC1DACF0C59}
 	EndGlobalSection
 EndGlobal

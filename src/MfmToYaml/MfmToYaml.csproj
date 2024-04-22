@@ -10,7 +10,10 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.HighPerformance" Version="8.2.2" />
-    <PackageReference Include="VYaml" Version="0.25.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\VYaml\VYaml\VYaml.csproj" />
   </ItemGroup>
 
 </Project>
